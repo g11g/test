@@ -3,5 +3,44 @@ git init 初始化git 一次性命令
 git add.   增加的功能
 
 git commit -m '提交说明'
+# 新文件，从未被Git管理过，是不能直接提交到仓库区的
+git commit -a -m "提交日志"
 
+git clear 清除
 
+查看提交日志
+- git log
+- git log --oneline
+
+体验在历史版本中穿梭
+- git checkout 版本号  --- 通过它，可以在历史版本中穿梭
+- git checkout master --- 通过它，可以回到“现在”
+
+需要加 --reflog 选项，才能查看所有的版本号
+git log --reflog --oneline
+
+# 查看文件的状态
+git status
+
+分支
+# 查看所有本地分支
+git branch
+
+# 创建新分支
+git branch 分支名
+# 比如，创建一个叫做add的分支
+git branch add
+
+# 切换分支
+git checkout 分支名
+# 比如，切换到add分支
+git checkout add
+
+- 切换到master
+- 执行 git merge add ，即可把add分支的代码合并到master
+
+合并之后，add和master分支的代码就回一样了。
+
+- 已经有本地仓库了
+- git remote add origin git@gitee.com:laotang1234/sy107.git
+git push -u origin master
