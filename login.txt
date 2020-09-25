@@ -1,0 +1,7 @@
+git init 初始化git 一次性命令
+
+git add.   增加的功能
+
+git commit -m '提交说明'
+
+
